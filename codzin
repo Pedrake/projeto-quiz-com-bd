@@ -1,0 +1,65 @@
+#Instalar pip connections e bibliotecas
+import mysql.connector
+from mysql.connector import Error
+import pandas as pd
+
+
+
+
+def create_server_connection(host_name, user_name, user_password):
+    connection = None
+    try:
+        connection = mysql.connector.connect(
+            host=host_name,
+            user=user_name,
+            passwd=user_password
+        )
+        print("Conexão feita com o banco de dados")
+    except Error as err:
+        print(f"Erro: '{err}'")
+
+    return connection
+
+
+
+
+
+connection = create_server_connection("localhost", "root", pw)
+
+def read_query(connection, query):
+    cursor = connection.cursor()
+    result = None
+    try:
+        cursor.execute(query)
+        result = cursor.fetchall()
+        return result
+    except Error as err:
+        print(f"Error: '{err}'")
+
+
+q1 = """
+SELECT *
+FROM opcoes;
+"""
+
+connection = "create_db_connection(\"localhost\", \"root\", pw, db)"
+results = read_query(connection, q1)
+
+for result in results:
+  print(result)
+
+
+
+#Config dois botoes para começar o quiz. botao Sim e botao Nao
+if \botao\ == sim:
+    #start quiz
+
+else botao == 'nao':
+    quit()
+
+ pontos = 0
+
+ #puxar perguntas do bd
+
+
+questao1 = ["o0","o1","o2","o3","1"]
