@@ -1,0 +1,22 @@
+import customtkinter as ctk
+
+janela = ctk.CTk()
+janela.title("tela Quiz")
+janela.geometry("700x400")
+
+pergunta= ctk.CTkLabel(janela, text="pergunta aqui",font=("arial bold", 20))
+pergunta.place(x=250, y=200)
+
+btn1 = ctk.CTkButton(janela, text="botao 1")
+btn1.place(x=160, y=250)
+
+btn2 = ctk.CTkButton(janela, text="botao 2")
+btn2.place(x=160, y=300)
+
+btn3 = ctk.CTkButton(janela, text="botao 3")
+btn3.place(x=330, y=250)
+
+btn4 = ctk.CTkButton(janela, text="botao 4")
+btn4.place(x=330, y=300)
+
+janela.mainloop()
