@@ -1,0 +1,43 @@
+#Parte da tela de login
+
+import tkinter
+import customtkinter
+
+
+
+janela = customtkinter.CTk()
+janela.geometry("500x300")
+#janela quiz = janelaq :)
+def janelaq():
+    janelaq = customtkinter.CTkToplevel(janela)
+    janelaq.geometry("900x700")
+    iniciar = customtkinter.CTkButton(janela,text="Iniciar Quiz", command = janelaq)
+    iniciar.pack(padx=10, pady=10)   
+
+
+
+
+
+janela.title("Print('quiz')")
+
+print("fazer login")
+
+
+texto = customtkinter.CTkLabel(janela, text="Fazer login")
+texto.pack(padx=10, pady=10)
+
+email = customtkinter.CTkEntry(janela,placeholder_text="Seu RA")
+email.pack(padx=10, pady=10)
+
+senha = customtkinter.CTkEntry(janela,placeholder_text="Sua senha",show="*")
+senha.pack(padx=10, pady=10)
+
+checkbox = customtkinter.CTkCheckBox(janela, text="lembrar login")
+checkbox.pack(padx='10',pady='10')
+#nesse espaço em branco é preciso fazer a area de cadastro
+
+#aqui temos q add a função de comparar as respostas de login e senha.
+login = customtkinter.CTkButton(janela,text="Login", command = janelaq)
+login.pack(padx=10, pady=10)
+
+janela.mainloop()
